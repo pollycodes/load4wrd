@@ -60,6 +60,8 @@ In order to use the `Load4wrd` facade, you need to register it on the `config/ap
 
 In order to use the `Load4wrd`, you need to setup your account from Load4wrd on the `config/services.php` file, you can do that the following way:
 
+> `config/services.php`
+
 ```php
 // file START ommited
     return [
@@ -74,6 +76,8 @@ In order to use the `Load4wrd`, you need to setup your account from Load4wrd on 
 ### 5 - Environment
 
 For security purpose you can use `.env` file, you can do that the following way:
+
+> `.env`
 
 ```php
 // file START ommited
