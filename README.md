@@ -2,9 +2,7 @@
 <!-- <p align="center"><img height="188" width="198" src="https://botman.io/img/botman.png"></p> -->
 <h1 align="center">Load4wrd</h1>
 
-An API for E-Loading Business for 3 networks in the Philippines.
-
-SMART, SUN and GLOBE
+Load4wrd is a tool for E-Loading Business for 3 networks (SMART, SUN and GLOBE) in the Philippines.
 
 ## About Load4wrd
 
