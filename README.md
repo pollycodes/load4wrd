@@ -56,6 +56,32 @@ In order to use the `Load4wrd` facade, you need to register it on the `config/ap
 // file END ommited
 ```
 
+### 4 - Config
+
+In order to use the `Load4wrd`, you need to setup your account from Load4wrd on the `config/services.php` file, you can do that the following way:
+
+```php
+// file START ommited
+    return [
+        'load4wrd' => [
+            'username' => env('L4D_USERNAME', 'Your-Username'),
+            'password' => env('L4D_PASSWORD', 'Your-Password'),
+        ],
+    ];
+// file END ommited
+```
+
+### 5 - Environment
+
+For security purpose you can use `.env` file, you can do that the following way:
+
+```php
+// file START ommited
+    L4D_USERNAME=Your-Username
+    L4D_PASSWORD=Your-Password
+// file END ommited
+```
+
 ## Documentation
 
 You can find the Load4wrd documentation SOON...
