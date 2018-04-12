@@ -1,5 +1,3 @@
-
-<!-- <p align="center"><img height="188" width="198" src="https://botman.io/img/botman.png"></p> -->
 <h1 align="center">Load4wrd</h1>
 
 Load4wrd is a tool for E-Loading Business for 3 networks (SMART, SUN and GLOBE) in the Philippines.
@@ -20,7 +18,6 @@ The first step is using composer to install the package and automatically update
 ```shell
 composer require pollycodes/load4wrd
 ```
-> **Note**: If you are using Laravel 5.5, the steps 2 and 3, for providers and aliases, are unnecessaries. SEOTools supports Laravel new [Package Discovery](https://laravel.com/docs/5.5/packages#package-discovery).
 
 ### 2 - Provider
 You need to update your application configuration in order to register the package so it can be loaded by Laravel, just update your `config/app.php` file adding the following code at the end of your `'providers'` section:
@@ -59,11 +56,9 @@ In order to use the `Load4wrd` facade, you need to register it on the `config/ap
 // file END ommited
 ```
 
-
-
 ## Documentation
 
-You can find the BotMan documentation SOON...
+You can find the Load4wrd documentation SOON...
 
 ## Contact Us
 **For registration and to have a Wallet Load from Telco**
