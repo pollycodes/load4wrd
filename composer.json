@@ -10,9 +10,12 @@
             "email": "kingpauloaquino@gmail.com"
         }
     ],
+    "config": {
+        "preferred-install": "dist"
+    },
     "autoload": {
         "psr-4": {
-            "Load4wrd\\": "src/"
+            "PollyCodes\\Load4wrd\\": "src/"
         }
     },
     "autoload-dev": {
