@@ -98,7 +98,7 @@ class LoadController extends Controller
       return $json;
     }
 
-    public function CheckWallet($target, $code) {
+    public function CheckWallet() {
       $loading = new Loading();
       $json = $loading->Balance();
       return $json;
