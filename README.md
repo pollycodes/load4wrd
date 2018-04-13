@@ -1,10 +1,10 @@
 <h1 align="center">Load4wrd</h1>
 
-Load4wrd is a tool for E-Loading Business for 3 networks (SMART, SUN and GLOBE) in the Philippines.
+Load4wrd is a tool for E-Loading Business for 3 networks (SMART, SUN, and GLOBE) in the Philippines.
 
 ## About Load4wrd
 
-Load4wrd is a framework agnostic PHP library that is designed to simplify the task of developing innovative e-loading businnes for 3 networks in the philippines.
+Load4wrd is a framework agnostic PHP library that is designed to simplify the task of developing e-loading business for 3 networks (SMART, SUN, and GLOBE) in the Philippines.
 
 
 ## Installation
