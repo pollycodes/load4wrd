@@ -1,14 +1,25 @@
 {
     "name": "pollycodes/load4wrd",
     "description": "Load4wrd is a tool for E-Loading Business for 3 networks in the Philippines.",
-    "type": "library",
+    "keywords": ["laravel", "library"],
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "King Paulo Aquino",
             "email": "kingpauloaquino@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Load4wrd\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "minimum-stability": "dev",
     "require": {}
 }
