@@ -6,26 +6,6 @@ Load4wrd is a tool for E-Loading Business for 3 networks (SMART, SUN and GLOBE) 
 
 Load4wrd is a framework agnostic PHP library that is designed to simplify the task of developing innovative e-loading businnes for 3 networks in the philippines.
 
-```php
-namespace App\Http\Controllers;
-
-use PollyCodes\Load4wrd\Loading;
-
-class LoadController extends Controller
-{
-    public function RequestLoad($target, $code) {
-      $loading = new Loading();
-      $json = $loading->Send('TARGET-MOBILE-NUMBER', 'PRODUCT-CODE');
-      return $json;
-    }
-
-    public function CheckWallet($target, $code) {
-      $loading = new Loading();
-      $json = $loading->Balance();
-      return $json;
-    }
-}
-```
 
 ## Installation
 ### 1 - Dependency
@@ -103,7 +83,28 @@ For security purpose you can use `.env` file, you can do that the following way:
 
 ## Documentation
 
-You can find the Load4wrd documentation SOON...
+Sample Code:
+
+```php
+namespace App\Http\Controllers;
+
+use PollyCodes\Load4wrd\Loading;
+
+class LoadController extends Controller
+{
+    public function RequestLoad($target, $code) {
+      $loading = new Loading();
+      $json = $loading->Send('TARGET-MOBILE-NUMBER', 'PRODUCT-CODE');
+      return $json;
+    }
+
+    public function CheckWallet($target, $code) {
+      $loading = new Loading();
+      $json = $loading->Balance();
+      return $json;
+    }
+}
+```
 
 ## Contact Us
 **For registration and to have a Wallet Load from Telco**
