@@ -103,6 +103,14 @@ class LoadController extends Controller
       $json = $loading->Balance();
       return $json;
     }
+
+    // network = SMART, SUN, and GLOBE
+    // set null for all networks product codes
+    public function GetProductCodes($network = null) {
+      $loading = new Loading();
+      $json = $loading->Product_Codes($network);
+      return $json;
+    }
 }
 ```
 

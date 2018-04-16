@@ -14,6 +14,17 @@ class Loading extends Controller
     return $response;
   }
 
+  public function Product_Codes($network = null) {
+    $data = null;
+    if($network != null) {
+      $data = array(
+        "network" => $network
+      );
+    }
+    $response = $this->curl($data, "product-codes");
+    return $response;
+  }
+
   public function Send($target, $code) {
     $data = array(
       "target" => $target,
@@ -32,6 +43,10 @@ class Loading extends Controller
     switch ($command) {
       case 'load':
         $url = "https://load4wrd.kpa.ph/api/v1/load";
+        break;
+
+      case 'product-codes':
+        $url = "https://load4wrd.kpa.ph/api/v1/product-codes";
         break;
 
       default:
