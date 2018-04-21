@@ -14,7 +14,7 @@ class Load4wrdServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        include __DIR__.'/routes/routes.php';
+        include __DIR__.'/Routes/routes.php';
     }
 
     /**
