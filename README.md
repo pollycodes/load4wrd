@@ -111,6 +111,12 @@ class LoadController extends Controller
       $json = $loading->Product_Codes($network);
       return $json;
     }
+
+    public function CheckProductCode($code) {
+      $loading = new Loading();
+      $json = $loading->Check_Product_Code($code);
+      return $json;
+    }
 }
 ```
 
