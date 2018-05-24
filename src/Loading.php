@@ -33,10 +33,11 @@ class Loading extends Controller
     return $response;
   }
 
-  public function Send($target, $code) {
+  public function Send($target, $code, $uniq_ref) {
     $data = array(
       "target" => $target,
-      "code" => $code
+      "code" => $code,
+      "uniq_ref" => $uniq_ref
     );
     $response = $this->curl($data, "load");
     return $response;

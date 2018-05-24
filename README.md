@@ -92,9 +92,12 @@ use PollyCodes\Load4wrd\Loading;
 
 class LoadController extends Controller
 {
-    public function RequestLoad($target, $code) {
+    // TARGET-MOBILE-NUMBER', 'PRODUCT-CODE', 'YOUR-16-UNIQUE-REFERENCE'
+    // Example:
+    // RequestLoad('09191234567', 'W5', '1234567890123456');
+    public function RequestLoad($target, $code, $uniq_reference) {
       $loading = new Loading();
-      $json = $loading->Send('TARGET-MOBILE-NUMBER', 'PRODUCT-CODE');
+      $json = $loading->Send($target, $code, $uniq_reference);
       return $json;
     }
 
