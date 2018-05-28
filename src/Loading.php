@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Config;
 
 class Loading extends Controller
 {
+
   public function Balance() {
     $response = $this->curl(null, "balance");
     return $response;
@@ -43,7 +44,18 @@ class Loading extends Controller
     return $response;
   }
 
+  public function Verify($reference) {
+    $data = array(
+      "reference" => $reference
+    );
+    $response = $this->curl($data, "verify");
+    return $response;
+  }
+
   public function curl($data, $command) {
+
+    $uri = "https://load4wrd.kpa.ph";
+
     $services = Config::get("services")["load4wrd"];
     $username = $services["username"];
     $password = $services["password"];
@@ -51,19 +63,23 @@ class Loading extends Controller
 
     switch ($command) {
       case 'load':
-        $url = "https://load4wrd.kpa.ph/api/v1/load";
+        $url = $uri . "/api/v1/load";
+        break;
+      
+      case 'verify':
+        $url = $uri . "/api/v1/load-verify";
         break;
 
       case 'product-codes':
-        $url = "https://load4wrd.kpa.ph/api/v1/product-codes";
+        $url = $uri . "/api/v1/product-codes";
         break;
 
       case 'check-product-code':
-        $url = "https://load4wrd.kpa.ph/api/v1/check-product-code";
+        $url = $uri . "/api/v1/check-product-code";
         break;
 
       default:
-        $url = "https://load4wrd.kpa.ph/api/v1/balance";
+        $url = $uri . "/api/v1/balance";
         break;
     }
 

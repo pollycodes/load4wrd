@@ -101,6 +101,13 @@ class LoadController extends Controller
       return $json;
     }
 
+    // submit reference number return from RequestLoad
+    public function VerifyLoadRequest($reference) {
+      $loading = new Loading();
+      $json = $loading->Verify($reference);
+      return $json;
+    }
+
     public function CheckWallet() {
       $loading = new Loading();
       $json = $loading->Balance();
