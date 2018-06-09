@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Config;
 class Loading extends Controller
 {
 
+  public static $host_url = "http://api.pollyload.com";
+
   public function Balance() {
     $response = $this->curl(null, "balance");
     return $response;
@@ -54,7 +56,7 @@ class Loading extends Controller
 
   public function curl($data, $command) {
 
-    $uri = "https://load4wrd.kpa.ph";
+    $uri = $this::$host_url; //"https://load4wrd.kpa.ph";
 
     $services = Config::get("services")["load4wrd"];
     $username = $services["username"];
