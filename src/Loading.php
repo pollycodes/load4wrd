@@ -12,6 +12,17 @@ class Loading extends Controller
 
   public static $host_url = "http://api.pollyload.com";
 
+  public function Environment() : string {
+    $services = Config::get("services")["load4wrd"];
+
+    if($services["environment"]) {
+      return "http://api.pollyload.com";
+    }
+
+    return "http://api-sandbox.pollyload.com";
+
+  }
+
   public function Balance() {
     $response = $this->curl(null, "balance");
     return $response;
@@ -56,7 +67,9 @@ class Loading extends Controller
 
   public function curl($data, $command) {
 
-    $uri = $this::$host_url; //"https://load4wrd.kpa.ph";
+    // $uri = $this::$host_url; //"https://load4wrd.kpa.ph";
+
+    $uri = $this->Environment();
 
     $services = Config::get("services")["load4wrd"];
     $username = $services["username"];
@@ -67,7 +80,7 @@ class Loading extends Controller
       case 'load':
         $url = $uri . "/api/v1/load";
         break;
-      
+
       case 'verify':
         $url = $uri . "/api/v1/load-verify";
         break;

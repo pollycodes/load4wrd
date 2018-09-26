@@ -63,6 +63,7 @@ In order to use the `Load4wrd`, you need to setup your account from Load4wrd on 
         'load4wrd' => [
             'username' => env('L4D_USERNAME', 'Your-Username'),
             'password' => env('L4D_PASSWORD', 'Your-Password'),
+            'environment' => env('L4D_ENV', false), // false = sandbox, true = production
         ],
     ];
 // file END ommited
@@ -78,6 +79,7 @@ For security purpose you can use `.env` file, you can do that the following way:
 // file START ommited
     L4D_USERNAME=Your-Username
     L4D_PASSWORD=Your-Password
+    L4D_ENV=false // false = sandbox, true production
 // file END ommited
 ```
 
