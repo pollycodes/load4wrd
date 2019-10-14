@@ -20,21 +20,21 @@ You need to update your application configuration in order to register the packa
 > `config/app.php`
 
 ```php
-// file START ommited
+// file START omitted
     'providers' => [
-        // other providers ommited
+        // other providers omitted
         PollyCodes\Load4wrd\Load4wrdServiceProvider::class,
     ],
-// file END ommited
+// file END omitted
 ```
 
 #### Lumen
 Go to `/bootstrap/app.php` file and add this line:
 
 ```php
-// file START ommited
+// file START omitted
 	$app->register(PollyCodes\Load4wrd\Load4wrdServiceProvider::class);
-// file END ommited
+// file END omitted
 ```
 
 ### 3 - Facade
@@ -44,11 +44,11 @@ Go to `/bootstrap/app.php` file and add this line:
 In order to use the `Load4wrd` facade, you need to register it on the `config/app.php` file, you can do that the following way:
 
 ```php
-// file START ommited
+// file START omitted
     'aliases' => [
         'Load4wrd' => PollyCodes\Load4wrd\Facades\Load4wrd::class,
     ],
-// file END ommited
+// file END omitted
 ```
 
 ### 4 - Config
@@ -58,7 +58,7 @@ In order to use the `Load4wrd`, you need to setup your account from Load4wrd on 
 > `config/services.php`
 
 ```php
-// file START ommited
+// file START omitted
     return [
         'load4wrd' => [
             'username' => env('L4D_USERNAME', 'Your-Username'),
@@ -66,7 +66,7 @@ In order to use the `Load4wrd`, you need to setup your account from Load4wrd on 
             'environment' => env('L4D_ENV', false), // false = sandbox, true = production
         ],
     ];
-// file END ommited
+// file END omitted
 ```
 
 ### 5 - Environment
@@ -76,11 +76,11 @@ For security purpose you can use `.env` file, you can do that the following way:
 > `.env`
 
 ```php
-// file START ommited
+// file START omitted
     L4D_USERNAME=Your-Username
     L4D_PASSWORD=Your-Password
     L4D_ENV=false // false = sandbox, true production
-// file END ommited
+// file END omitted
 ```
 
 ## Documentation
